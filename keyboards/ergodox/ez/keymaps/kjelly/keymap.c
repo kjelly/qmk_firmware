@@ -6,6 +6,10 @@
 #define SYMB 1 // symbols
 #define MDIA 2 // media keys
 #define ALM(x) ACTION_LAYER_MOMENTARY(x)
+#define OSM_LCTL OSM(MOD_LCTL)
+#define OSM_LALT OSM(MOD_LALT)
+#define OSM_LGUI OSM(MOD_LGUI)
+#define OSM_LSFT OSM(MOD_LSFT)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
@@ -37,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,            KC_W,          KC_E,          KC_R,   KC_T,   KC_MINS,
         KC_FN2,         KC_A,            KC_S,          KC_D,          KC_F,   KC_G,
         KC_LSFT,        CTL_T(KC_Z),  ALT_T(KC_X),   GUI_T(KC_C),      KC_V,   KC_B,   KC_GRV,
-        KC_LCTL,        KC_LALT,         KC_LGUI,       KC_LBRC,       KC_RBRC,
+        OSM_LCTL,       OSM_LALT,        OSM_LGUI,      KC_LBRC,       KC_RBRC,
                                                       KC_LEFT,KC_RIGHT,
                                                               KC_UP,
                                                KC_SPC,KC_BSPC,KC_DOWN,
@@ -78,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        // left hand
        KC_TRNS,KC_F1,  KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_TRNS,
        KC_TRNS,KC_GRV, KC_TILD,KC_BSLS,KC_PIPE,KC_LBRC,KC_TRNS,
-       KC_TRNS,KC_HASH,KC_DLR, KC_LPRN,KC_PGDN,KC_END,
+       KC_TRNS,KC_ESC ,KC_LPRN,KC_RPRN,KC_PGDN,KC_END,
        KC_TRNS,KC_PERC,KC_CIRC,KC_LBRC,KC_HOME,KC_PGUP,KC_TRNS,
        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
                                        KC_TRNS,KC_TRNS,
